@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Q-Chat</string>
+    <string name="login">Log in</string>
+    <string name="create_your">Create your</string>
+    <string name="account">account</string>
+    <string name="your_name">Your Name</string>
+    <string name="your_e_mail">Your E-mail : </string>
+    <string name="your_password">Your Password</string>
+    <string name="join_us">Join Us</string>
+    <string name="register">Register</string>
+    <string name="login_to_your">Login to your</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_messages">Messages</string>
+    <string name="title_setting">Setting</string>
+    <string name="title_activity_home2">Home2</string>
+    <string name="forget_your_password">Forget Your Password</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="name">Name : </string>
+    <string name="last_conversation">Last Conversation</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_discover">Discover</string>
+    <string name="logout">Logout</string>
+    <string name="write_msg_here">Write Msg Here</string>
+    <string name="status">Status</string>
+    <string name="message_status">Message Status</string>
+    <string name="last_message">Last Message</string>
+    <string name="users">Discover</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="select_country">Select Country</string>
+    <string name="sex">Sex : </string>
+    <string name="country">Country : </string>
+    <string name="bio">Bio : </string>
+    <string name="write_something_about_your_self">Write Something About Your Self</string>
+    <string name="meet_new_friend">Meet New Friend</string>
+    <string name="online">Online</string>
+    <string name="sort_by">Sort by :</string>
+    <string name="no_filter">No Filter</string>
+    <string name="search">Search</string>
+    <string name="both">Both</string>
+    <string name="all_countries">All Countries</string>
+
+
+</resources>

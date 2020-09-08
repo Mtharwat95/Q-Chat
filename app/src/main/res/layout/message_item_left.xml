@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:background="@color/offWhite"
+    android:padding="4dp"
+    tools:ignore="RtlSymmetry"
+    android:layout_marginRight="64dp"
+    android:layout_marginEnd="64dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp">
+
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:maxWidth="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:textAlignment="textStart"
+        android:paddingLeft="4dp"
+        android:textStyle="italic"
+        android:layout_alignParentLeft="true"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:textColor="@color/darkGreen"
+        android:paddingStart="4dp"
+        tools:ignore="RtlHardcoded,RtlSymmetry"
+        android:gravity="start" />
+
+    <TextView
+        android:id="@+id/tvMessageStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/message_status"
+        android:textAlignment="textStart"
+        android:paddingLeft="4dp"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:textAllCaps="false"
+        android:textSize="8sp"
+        android:textColor="@color/red"
+        android:paddingStart="4dp"
+        tools:ignore="RtlHardcoded,RtlSymmetry,SmallSp"
+        android:gravity="start"
+        android:layout_below="@id/tvMessage"
+        android:layout_marginTop="4dp"/>
+
+
+</RelativeLayout>

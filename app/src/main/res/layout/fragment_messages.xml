@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bar"
+            android:minHeight="?attr/actionBarSize">
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="@string/title_messages"
+                android:layout_centerInParent="true"
+                android:textColor="@color/appGreen"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                tools:ignore="RelativeOverlap,RtlSymmetry"
+                android:layout_alignParentLeft="true"
+                android:padding="8dp"/>
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/ivGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_group_24dp"
+                tools:ignore="ContentDescription,VectorDrawableCompat"
+                android:layout_alignParentRight="true" />
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/SearchView"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:layout_toLeftOf="@id/tvMessage"
+                android:layout_alignParentEnd="true"
+                tools:ignore="ContentDescription,OnClick"
+                android:layout_marginRight="16sp"
+                android:layout_alignParentRight="true"
+                android:layout_toStartOf="@id/tvMessage" />
+
+            <EditText
+                android:id="@+id/etSearchView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/tvMessage"
+                android:layout_marginStart="8dp"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:inputType="text"
+                android:layout_toEndOf="@id/tvMessage"
+                android:layout_marginLeft="8dp" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBarMessages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAllChat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

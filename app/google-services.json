@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "492081303545",
+    "firebase_url": "https://click-b4246.firebaseio.com",
+    "project_id": "click-b4246",
+    "storage_bucket": "click-b4246.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492081303545:android:9df9ada7f507891bbcb728",
+        "android_client_info": {
+          "package_name": "com.example.click"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "492081303545-d9n4lvl3d6jsvsvpir6r6oq4g93nnu3a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.click",
+            "certificate_hash": "7129307a05962bfd546793b52e942bb979d39cc2"
+          }
+        },
+        {
+          "client_id": "492081303545-ej20i19hu7s2q07mg0su82bc3egvan93.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbReDQ5Whlzda3_q4Mdql4MW6pqh83R-M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "492081303545-ej20i19hu7s2q07mg0su82bc3egvan93.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
