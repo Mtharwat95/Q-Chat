@@ -38,6 +38,7 @@ public class MainModel implements RegistrationMainContract.IModel {
     private DatabaseReference refrence;
     private StorageReference storageReference;
     private UploadTask uploadTask;
+
     public MainModel(RegistrationMainContract.Listener onLoginListener) {
         this.onLoginListener = onLoginListener;
     }
