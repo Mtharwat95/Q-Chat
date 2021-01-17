@@ -10,3 +10,12 @@
     • Butter Knife.
     • Glide.
     • Views (Tabbed Activity, Recycle View, Card View …).
+
+# Screen-Shots:
+![](ScreenShots/splash.jpg)
+![](ScreenShots/login.jpg)
+![](ScreenShots/signUp.jpg)
+![](ScreenShots/profile.jpg)
+![](ScreenShots/messages.jpg)
+![](ScreenShots/discover.jpg)
+![](ScreenShots/filter.jpg)
