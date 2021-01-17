@@ -7,8 +7,7 @@
     android:maxWidth="250dp"
     android:layout_alignParentEnd="true"
     android:layout_alignParentRight="true"
-    android:background="@color/bar"
-    android:padding="4dp"
+    android:background="@drawable/msg_shape"
     tools:ignore="RtlSymmetry"
     android:layout_marginLeft="64dp"
     android:layout_marginStart="64dp"
@@ -19,35 +18,30 @@
 
     <TextView
         android:id="@+id/tvMessage"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:maxWidth="250dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/msg_shape"
         android:text="@string/name"
-        android:paddingRight="4dp"
-        android:textStyle="italic"
+        style="@style/smallTextData"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:textAllCaps="false"
-        android:textSize="15sp"
-        android:textColor="@color/appGreen"
-        android:paddingEnd="4dp" />
+        android:layout_alignParentRight="true" />
 
     <TextView
         android:id="@+id/tvMessageStatus"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/msg_shape"
         android:text="@string/message_status"
-        android:paddingRight="4dp"
-        android:textStyle="bold"
+        style="@style/smallTextStatus"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_below="@id/tvMessage"
-        android:textAllCaps="false"
-        android:textSize="8sp"
-        android:textColor="@color/red"
-        android:paddingEnd="4dp"
-        tools:ignore="SmallSp"
-        android:layout_marginTop="4dp"/>
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="4dp"/>
 
 
 

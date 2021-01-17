@@ -30,9 +30,7 @@ public class MainModel implements RegistrationMainContract.IModel {
 
     private RegistrationMainContract.Listener onLoginListener;
     private RegistrationMainContract.RegisterListener registerListener;
-
     private FirebaseUser firebaseUser;
-
     private String userId;
     private String TAG = "LoginModel";
     private DatabaseReference refrence;

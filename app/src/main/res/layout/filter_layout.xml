@@ -6,8 +6,8 @@
     android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@color/darkGreen"
-    app:cardBackgroundColor="@color/bar"
+    android:background="@color/baseBackGround"
+    app:cardBackgroundColor="@color/baseBackGround"
     app:cardCornerRadius="16dp"
     app:cardElevation="7dp"
     android:padding="4dp"
@@ -18,17 +18,14 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/darkGreen">
+        android:background="@color/baseBackGround">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textColor="@color/appGreen"
-            android:textSize="20sp"
             android:text="@string/sort_by"
+            style="@style/smallTextData"
             android:layout_marginTop="8dp"
-            android:padding="8dp"
             android:id="@+id/sortBy"/>
 
         <CheckBox
@@ -39,20 +36,16 @@
             android:layout_marginTop="8dp"
             android:layout_toEndOf="@id/sortBy"
             android:layout_toRightOf="@id/sortBy"
-            android:padding="8dp"
             android:text="@string/no_filter"
-            android:textColor="@color/red"
-            android:textStyle="bold" />
+            style="@style/smallTextData" />
 
         <CheckBox
             android:id="@+id/onlineFilter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/online"
-            android:textColor="@color/red"
-            android:textStyle="bold"
+            style="@style/smallTextData"
             android:layout_marginTop="8dp"
-            android:padding="8dp"
             android:layout_below="@id/NoFilter"
             android:layout_toEndOf="@id/sortBy"
             android:layout_toRightOf="@id/sortBy" />
@@ -71,9 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/all_countries"
-                android:textColor="@color/red"
-                android:textStyle="bold"
-                android:padding="8dp" />
+               style="@style/smallTextData"/>
 
             <RelativeLayout
                 android:id="@+id/country_spinner"
@@ -88,11 +79,9 @@
                     android:layout_height="wrap_content"
                     android:focusable="false"
                     android:text="@string/select_country"
-                    android:textColor="@color/red"
-                    android:textStyle="bold"
                     tools:ignore="RelativeOverlap"
                     android:layout_centerVertical="true"
-                    android:padding="8dp"/>
+                    style="@style/smallTextData"/>
 
                 <ImageView
                     android:id="@+id/ivShowDialog"
@@ -130,9 +119,7 @@
                 android:checked="false"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:padding="8dp"
-                android:textColor="@color/red"
-                android:textStyle="bold"/>
+                style="@style/smallTextData"/>
 
             <RadioButton
                 android:layout_width="wrap_content"
@@ -144,9 +131,7 @@
                 android:checked="false"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
-                android:padding="8dp"
-                android:textColor="@color/red"
-                android:textStyle="bold"/>
+                style="@style/smallTextData"/>
 
             <RadioButton
                 android:layout_width="wrap_content"
@@ -158,9 +143,7 @@
                 android:checked="false"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
-                android:padding="8dp"
-                android:textColor="@color/red"
-                android:textStyle="bold"/>
+                style="@style/smallTextData"/>
         </RadioGroup>
 
 

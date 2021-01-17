@@ -43,10 +43,8 @@ import butterknife.OnClick;
 
 public class MessagesFragment extends Fragment implements MessagesContract.MessagesView {
 
-    @BindView(R.id.SearchView) SearchView ivSearch;
     @BindView(R.id.rvAllChat) RecyclerView rvAllChat;
     @BindView(R.id.progressBarMessages) ProgressBar progressBarMessages;
-    @BindView(R.id.etSearchView) EditText etSearchView;
     private MessagesAdapter messagesAdapter;
     private List<ChatList> userChatList;
     private List<String> userListString;
@@ -93,28 +91,9 @@ public class MessagesFragment extends Fragment implements MessagesContract.Messa
         reference.child(firebaseUser.getUid()).setValue(token1);
     }
 
-    @OnClick(R.id.SearchView)
-    void serchClick() {
-        etSearchView.setVisibility(View.VISIBLE);
-        ivSearch.setVisibility(View.GONE);
-        etSearchView.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-            }
 
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                searchUser(charSequence.toString().toLowerCase());
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
-    }
-
+/*
     private void searchUser(String s) {
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         Query query = FirebaseDatabase.getInstance().
@@ -146,6 +125,7 @@ public class MessagesFragment extends Fragment implements MessagesContract.Messa
             }
         });
     }
+*/
 
     @Override
     public void onSuccess(List<User> userList) {

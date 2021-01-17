@@ -108,7 +108,7 @@ public class DiscoverAdapter extends RecyclerView.Adapter<DiscoverAdapter.ViewHo
             user_image = itemView.findViewById(R.id.ivUserListImgDiscover);
             user_name = itemView.findViewById(R.id.tvListUserNameDiscover);
             tvBio = itemView.findViewById(R.id.tvListBioDiscover);
-            user_status = itemView.findViewById(R.id.tvUserStatusDiscover);
+            user_status = itemView.findViewById(R.id.ivUserStatus);
             tvCountryDiscover = itemView.findViewById(R.id.tvCountryDiscover);
 
         }

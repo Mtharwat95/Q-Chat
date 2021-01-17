@@ -1,5 +1,6 @@
 package com.example.click.ui.Registration.View;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -36,6 +37,7 @@ import com.example.click.ui.Registration.Presenter.RegistrationMainContract;
 import com.fxn.pix.Options;
 import com.fxn.pix.Pix;
 import com.fxn.utility.PermUtil;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.storage.StorageTask;
 
 import org.jetbrains.annotations.NotNull;
@@ -53,15 +55,16 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 
 public class Register extends AppCompatActivity implements RegistrationMainContract.RegisterView, CountriesAdapter.CountryAdapterListener {
-
-    @BindView(R.id.etNameRegister)
-    EditText etNameRegister;
-    @BindView(R.id.etEmailRegister)
-    EditText etEmailRegister;
-    @BindView(R.id.etPasswordRegister)
-    EditText etPasswordRegister;
     @BindView(R.id.ProgressRegister)
     ProgressBar progressRegister;
+    @BindView(R.id.etNameRegister)
+    TextInputEditText etNameRegister;
+    @BindView(R.id.etEmailRegister)
+    TextInputEditText etEmailRegister;
+    @BindView(R.id.etPasswordRegister)
+    TextInputEditText etPasswordRegister;
+    @BindView(R.id.etBioRegister)
+    TextInputEditText etBioRegister;
     @BindView(R.id.ivRegisterProfileImage)
     CircleImageView ivRegisterProfileImage;
     @BindView(R.id.tvSelectedCountry)
@@ -73,8 +76,7 @@ public class Register extends AppCompatActivity implements RegistrationMainContr
 
     RadioButton radioSex;
     String userName, email, password, gender, country,bio;
-    @BindView(R.id.etBioRegister)
-    EditText etBioRegister;
+
     private Uri ImageUri;
     StorageTask uploadTask;
     private MainPresenter presenter;
@@ -106,6 +108,7 @@ public class Register extends AppCompatActivity implements RegistrationMainContr
         finish();
     }
 
+    @SuppressLint("NonConstantResourceId")
     @OnClick(R.id.btnJoinUs)
     void onRegister() {
         int selectedId;
@@ -132,12 +135,7 @@ public class Register extends AppCompatActivity implements RegistrationMainContr
         Pix.start(Register.this, Options.init().setRequestCode(Util.IMAGE_REQUEST));
     }
 
-    @OnClick(R.id.tvLogin)
-    void onLogin() {
-        Intent intent = new Intent(this, Login.class);
-        startActivity(intent);
-        finish();
-    }
+
 
     @OnClick(R.id.ivBackLogin)
     void back() {
@@ -204,13 +202,11 @@ public class Register extends AppCompatActivity implements RegistrationMainContr
     @Override
     public void onUploadSuccess(String message) {
         Toast.makeText(Register.this, message, Toast.LENGTH_SHORT).show();
-
     }
 
     @Override
     public void onUploadFailed(String message) {
         Toast.makeText(Register.this, message, Toast.LENGTH_SHORT).show();
-
     }
 
     @Override

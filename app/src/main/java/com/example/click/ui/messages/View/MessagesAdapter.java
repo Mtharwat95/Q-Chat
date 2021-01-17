@@ -102,7 +102,7 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.ViewHo
             super(itemView);
             user_image = itemView.findViewById(R.id.ivUserListImg);
             user_name = itemView.findViewById(R.id.tvListUserName);
-            user_status = itemView.findViewById(R.id.tvUserStatus);
+            user_status = itemView.findViewById(R.id.ivUserStatus);
             tvlastMessages = itemView.findViewById(R.id.tvLastMessage);
             view=itemView.findViewById(R.id.vvv);
         }

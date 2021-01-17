@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
-    <color name="black">#070707</color>
-    <color name="orange">#FF0000</color>
 
-    <color name="home">#312F2F</color>
-    <color name="bar">#474747</color>
-    <color name="white">#ffffff</color>
-    <color name="offWhite">#BAB8B6</color>
-    <color name="gray">#848C8E</color>
-<!--    <color name="appGreen">#64DD17</color>-->
-    <color name="appGreen">#0779e4</color>
-    <color name="realRed">#c81912</color>
-    <color name="red">#070707</color>
 
-    <color name="darkGreen">#2e5902</color>
-    <color name="colorPrimaryPix">#075e54</color>
-    <color name="colorPrimaryLightPix">#80075e54</color>
+    <!--       New Design         -->
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="backGround0">#595B83</color>
+    <color name="baseBackGround">#333456</color>
+    <color name="darkBlue">#060930</color>
+    <color name="lightBlue">#030958</color>
+    <color name="lightPage">#F4ABC4</color>
+    <color name="darkPage">#CB879E</color>
+
+
 </resources>

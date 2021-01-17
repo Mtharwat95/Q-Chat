@@ -13,7 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.example.click.Nutil.Constants;
 import com.example.click.R;
 import com.example.click.ui.Registration.Model.Country;
 
@@ -23,8 +22,8 @@ import java.util.List;
 public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.MyViewHolder> implements Filterable {
 
     private List<Country> allCountries;
-    private MaterialDialog dialog;
-    private CountryAdapterListener countryFilterlistener;
+    private final MaterialDialog dialog;
+    private final CountryAdapterListener countryFilterlistener;
     private List<Country> mFilteredList;
     String TAG="CountriesAdapter";
 

@@ -23,7 +23,7 @@ import androidx.fragment.app.Fragment;
 import com.example.click.Home;
 import com.example.click.Nutil.Util;
 import com.example.click.R;
-import com.example.click.Start;
+import com.example.click.Splash;
 import com.example.click.ui.profile.Model.User;
 import com.example.click.ui.profile.Presenter.ProfileMainContract;
 import com.example.click.ui.profile.Presenter.ProfilePresenter;
@@ -53,8 +53,6 @@ public class ProfileFragment extends Fragment implements ProfileMainContract.Pro
     TextView tvUserName;
     @BindView(R.id.tvEmail)
     TextView tvEmail;
-    @BindView(R.id.forgetPassword)
-    TextView forgetPassword;
     @BindView(R.id.toolbarProfile)
     Toolbar toolbarProfile;
     @BindView(R.id.profileProgressBar)
@@ -97,17 +95,17 @@ public class ProfileFragment extends Fragment implements ProfileMainContract.Pro
     }
 
 
-    @OnClick(R.id.forgetPassword)
-    void forgetPassword() {
-        profileProgressBar.setVisibility(View.VISIBLE);
-        profilePresenter.requesForgetPassword();
-
-    }
+//    @OnClick(R.id.forgetPassword)
+//    void forgetPassword() {
+//        profileProgressBar.setVisibility(View.VISIBLE);
+//        profilePresenter.requesForgetPassword();
+//
+//    }
 
 
     private void onLogout(Activity activity) {
         FirebaseAuth.getInstance().signOut();
-        Util.startActivityUtil(activity, Start.class);
+        Util.startActivityUtil(activity, Splash.class);
     }
 
 

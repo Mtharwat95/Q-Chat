@@ -7,51 +7,424 @@
     android:orientation="horizontal"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.Registration.View.Register"
-    android:background="@color/home">
+    android:background="@color/backGround0">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/home">
+        android:background="@color/backGround0">
 
-        <RelativeLayout
+        <androidx.cardview.widget.CardView
             android:id="@+id/topBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="@color/bar"
-            android:padding="8dp"
-            android:layout_alignParentTop="true"
-            tools:ignore="UselessParent">
+            android:background="@color/backGround0"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="30dp">
 
-            <TextView
-                android:id="@+id/tvLogin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/login"
-                android:layout_alignParentEnd="true"
-                tools:ignore="RelativeOverlap"
-                android:layout_alignParentRight="true"
-                style="@style/TextViewStyle"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <RelativeLayout
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
                 android:padding="8dp"
-                style="@style/TextViewStyle"
-                android:text="@string/register"
-                android:layout_centerInParent="true"/>
+                android:background="@color/backGround0"
+                android:layout_alignParentTop="true"
+                tools:ignore="UselessParent">
 
-            <ImageView
-                android:id="@+id/ivBackLogin"
-                android:layout_width="wrap_content"
+
+                <ImageView
+                    android:id="@+id/ivBackLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:background="@drawable/ic_back_24dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    tools:ignore="ContentDescription"
+                    android:layout_alignParentLeft="true" />
+                <TextView
+                    style="@style/headLineText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/app_name" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/registerHeaderTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:orientation="vertical"
+            android:layout_below="@id/topBar"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                style="@style/headLineText"
+                android:id="@+id/dsad"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/ic_back_24dp"
-                android:layout_alignParentStart="true"
-                tools:ignore="ContentDescription"
-                android:layout_alignParentLeft="true" />
+                android:layout_gravity="center_horizontal"
+                android:text="@string/create_your_new" />
 
-        </RelativeLayout>
+            <TextView
+                style="@style/headLineText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/account" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/registerHeaderTitle"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/backGround0"
+                tools:ignore="UselessLeaf,UselessParent"
+                android:layout_below="@id/header_title">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivRegisterProfileImage"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="center_horizontal"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="@color/lightPage"
+                    android:background="@drawable/ic_profile_24dp" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:background="@drawable/rounded_shape"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:hint="@string/write_something_about_your_self"
+                        android:textColorHint="@color/white"
+                        android:paddingLeft="8dp"
+                        android:paddingStart="8dp"
+                        app:expandedHintEnabled="true"
+                        app:hintAnimationEnabled="true"
+                        app:hintTextColor="@color/white"
+                        tools:ignore="RtlSymmetry">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etBioRegister"
+                            android:background="@drawable/rounded_shape"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            style="@style/smallTextData"
+                            android:maxLines="1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:background="@drawable/rounded_shape"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:hint="@string/your_name"
+                        android:textColorHint="@color/white"
+                        android:paddingLeft="8dp"
+                        app:expandedHintEnabled="true"
+                        app:hintAnimationEnabled="true"
+                        app:hintTextColor="@color/white"
+                        android:paddingStart="8dp"
+                        tools:ignore="RtlSymmetry">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etNameRegister"
+                            android:background="@drawable/rounded_shape"
+                            android:layout_width="match_parent"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            style="@style/smallTextData"
+                            android:maxLines="1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:background="@drawable/rounded_shape"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:hint="@string/your_e_mail"
+                        android:textColorHint="@color/white"
+                        android:paddingLeft="8dp"
+                        app:expandedHintEnabled="true"
+                        app:hintAnimationEnabled="true"
+                        app:hintTextColor="@color/white"
+                        android:paddingStart="8dp"
+                        tools:ignore="RtlSymmetry">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEmailRegister"
+                            android:background="@drawable/rounded_shape"
+                            android:layout_width="match_parent"
+                            style="@style/smallTextData"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:background="@drawable/rounded_shape"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:hint="@string/your_password"
+                        android:textColorHint="@color/white"
+                        android:paddingLeft="8dp"
+                        app:expandedHintEnabled="true"
+                        app:hintAnimationEnabled="true"
+                        app:hintTextColor="@color/white"
+                        android:paddingStart="8dp"
+                        tools:ignore="RtlSymmetry">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPasswordRegister"
+                            android:background="@drawable/rounded_shape"
+                            android:layout_width="match_parent"
+                            style="@style/smallTextData"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:maxLines="1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="100"
+                        android:background="@color/baseBackGround"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/smallTextData"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:paddingLeft="8dp"
+                            android:background="@color/baseBackGround"
+                            android:text="@string/gender"
+                            android:paddingStart="8dp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2"
+                            android:background="@color/baseBackGround"
+                            android:id="@+id/radioGroupGender"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center"
+                            android:padding="0dp">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/male"
+                                android:id="@+id/radioMale"
+                                android:layout_gravity="center"
+                                android:checked="false"
+                                style="@style/smallTextData"
+                                android:background="@color/baseBackGround"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:padding="8dp"/>
+
+                            <RadioButton
+                                android:background="@color/baseBackGround"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/female"
+                                android:id="@+id/radioFemale"
+                                android:layout_gravity="center"
+                                android:checked="false"
+                                style="@style/smallTextData"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginLeft="16dp"
+                                android:padding="8dp"/>
+                        </RadioGroup>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/country_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_height="match_parent"
+                        android:background="@color/baseBackGround"
+                        android:focusable="true">
+
+                        <TextView
+                            android:id="@+id/selectCountry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:layout_alignParentStart="true"
+                            android:background="@color/baseBackGround"
+                            android:text="@string/select_country"
+                            style="@style/smallText"
+                            tools:ignore="RelativeOverlap,RtlSymmetry"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="8dp"
+                            android:layout_alignParentLeft="true"
+                            android:paddingStart="8dp" />
+
+                        <ImageView
+                            android:id="@+id/ivShowDialog"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:focusable="false"
+                            android:padding="8dp"
+                            app:srcCompat="@drawable/ic_keyboard_arrow_down_white_24dp"
+                            android:layout_alignParentRight="true"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/tvSelectedCountry"
+                            android:layout_width="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_toRightOf="@id/selectCountry"
+                            android:layout_toLeftOf="@id/ivShowDialog"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            style="@style/smallTextData"
+                            android:layout_marginRight="8dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="8dp"
+                            tools:ignore="RelativeOverlap"
+                            android:layout_toEndOf="@id/selectCountry"
+                            android:layout_toStartOf="@id/ivShowDialog" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_below="@id/cardData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp">
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/RippleStyleGrey">
+
+                <Button
+                    android:id="@+id/btnJoinUs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/register"
+                    style="@style/buttonTextStyle"/>
+
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+        </androidx.cardview.widget.CardView>
 
         <ProgressBar
             android:id="@+id/ProgressRegister"
@@ -60,189 +433,6 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:visibility="gone"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_below="@id/topBar"
-            android:layout_marginTop="16dp"
-            android:padding="16dp"
-            android:visibility="gone">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/create_your"
-                style="@style/TextViewStyle"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/account"
-                style="@style/TextViewStyle" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_centerInParent="true"
-            tools:ignore="UselessLeaf,UselessParent"
-            android:layout_margin="4dp"
-            android:padding="16dp"
-            android:layout_below="@id/topBar">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/ivRegisterProfileImage"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center_horizontal"
-                app:civ_border_width="2dp"
-                app:civ_border_color="@color/appGreen"
-                android:background="@drawable/ic_profile_24dp" />
-
-            <EditText
-                android:id="@+id/etBioRegister"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textMultiLine"
-                android:maxLines="3"
-                android:lines="3"
-                android:padding="8dp"
-                android:gravity="center"
-                android:hint="@string/write_something_about_your_self"
-                android:importantForAutofill="no"
-                style="@style/EditTextStyle"/>
-
-            <EditText
-                android:id="@+id/etNameRegister"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:padding="8dp"
-                android:layout_marginTop="16dp"
-                android:hint="@string/your_name"
-                android:importantForAutofill="no"
-                style="@style/EditTextStyle"/>
-
-            <EditText
-                android:id="@+id/etEmailRegister"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:padding="8dp"
-                android:layout_marginTop="16dp"
-                android:hint="@string/your_e_mail"
-                android:importantForAutofill="no"
-                style="@style/EditTextStyle"/>
-
-            <EditText
-                android:id="@+id/etPasswordRegister"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:padding="8dp"
-                android:layout_marginTop="16dp"
-                android:hint="@string/your_password"
-                android:importantForAutofill="no"
-                style="@style/EditTextStyle"/>
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:weightSum="2"
-                android:id="@+id/radioGroupGender"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/male"
-                    android:id="@+id/radioMale"
-                    android:layout_gravity="center_horizontal"
-                    android:checked="false"
-                    style="@style/TextViewStyle"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:padding="8dp"/>
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/female"
-                    android:id="@+id/radioFemale"
-                    android:layout_gravity="center_horizontal"
-                    android:checked="false"
-                    style="@style/TextViewStyle"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:padding="8dp"/>
-            </RadioGroup>
-
-            <RelativeLayout
-                android:id="@+id/country_spinner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="?selectableItemBackground"
-                android:focusable="true"
-                android:padding="8dp"
-                android:layout_marginTop="16dp">
-
-                <TextView
-                    android:id="@+id/tvSelectedCountry"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:focusable="false"
-                    android:text="@string/select_country"
-                    style="@style/TextViewStyle"
-                    tools:ignore="RelativeOverlap"
-                    android:layout_centerVertical="true"
-                    android:padding="8dp"/>
-
-                <ImageView
-                    android:id="@+id/ivShowDialog"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:focusable="false"
-                    android:padding="8dp"
-                    app:srcCompat="@drawable/ic_keyboard_arrow_down_white_24dp"
-                    android:layout_alignParentRight="true"
-                    tools:ignore="ContentDescription" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:background="@color/black"
-                    android:layout_below="@id/ivShowDialog"
-                    android:padding="2dp"/>
-
-            </RelativeLayout>
-
-
-            <Button
-                android:id="@+id/btnJoinUs"
-                android:layout_gravity="center_horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:layout_marginTop="16dp"
-                android:text="@string/register"
-                android:importantForAutofill="no"
-                style="@style/ButtonStyle"/>
-
-        </LinearLayout>
-
     </RelativeLayout>
 
 

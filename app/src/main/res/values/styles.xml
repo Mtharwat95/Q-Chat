@@ -1,39 +1,118 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme"
-        parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/bar</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="Theme.QChat" parent="Theme.MaterialComponents.NoActionBar">
+
     </style>
 
+    <!-- New Design   -->
 
-    <style name="TextViewStyle"
-        parent="@android:style/TextAppearance.Widget.TextView">
-        <item name="android:textAllCaps">false</item>
-        <item name="android:textStyle">italic</item>
-        <item name="android:textColor">@color/appGreen</item>
-        <item name="android:textSize">15sp</item>
-    </style>
-
-    <style name="EditTextStyle">
-        <item name="android:textAllCaps">false</item>
-        <item name="android:textStyle">italic</item>
-        <item name="android:textColor">@color/appGreen</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:textColorHint">@color/appGreen</item>
-    </style>
-
-
-    <style name="ButtonStyle">
-        <item name="android:background">@color/bar</item>
+    <style name="splashText">
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/lightBlue</item>
+        <item name="android:textSize">90sp</item>
+        <item name="fontFamily">@font/open_sans_light</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/appGreen</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:textColorHint">@color/appGreen</item>
-        <item name="android:textAllCaps">false</item>
+        <item name="android:shadowDx">5</item>
+        <item name="android:shadowDy">5</item>
+        <item name="android:shadowRadius">10</item>
+        <item name="android:shadowColor">@color/white</item>
     </style>
 
+    <style name="splashGuide">
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/lightBlue</item>
+        <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/open_sans_light</item>
+        <item name="android:textStyle">bold</item>
+        <item name="itemPadding">4dp</item>
+    </style>
+
+    <style name="headLineText">
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/lightBlue</item>
+        <item name="android:textSize">30sp</item>
+        <item name="fontFamily">@font/open_sans_light</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">10</item>
+        <item name="android:shadowColor">@color/white</item>
+    </style>
+
+    <style name="smallText">
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="android:background">@color/backGround0</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="smallTextHint">
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:background">@color/baseBackGround</item>
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="smallTextStatus">
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:background">@color/baseBackGround</item>
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="smallTextData">
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:background">@color/baseBackGround</item>
+        <item name="fontFamily">@font/open_sans_light</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="buttonTextStyle">
+        <item name="background">@drawable/button_background</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/lightBlue</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:background">@drawable/button_background</item>
+        <item name="fontFamily">@font/open_sans_light</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">15</item>
+        <item name="android:shadowColor">@color/white</item>
+    </style>
+
+    <style name="RippleStyleGrey">
+        <item name="mrl_rippleOverlay">true</item>
+        <item name="rippleColor">@color/white</item>
+        <item name="mrl_rippleAlpha">0.2</item>
+
+    </style>
+
+    <style name="AppTheme.RoundedTextView" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/rounded_shape</item>
+        <item name="android:textColor">@color/lightBlue</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/open_sans_light</item>
+        <item name="fontStyle">normal</item>
+        <item name="android:padding">4dp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:gravity">center</item>
+    </style>
 </resources>

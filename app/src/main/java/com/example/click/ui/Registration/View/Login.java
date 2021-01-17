@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.balysv.materialripple.MaterialRippleLayout;
 import com.example.click.Home;
 import com.example.click.Nutil.Util;
 import com.example.click.R;
@@ -27,11 +28,13 @@ public class Login extends AppCompatActivity implements RegistrationMainContract
     @BindView(R.id.etPasswordLogin)
     EditText etPasswordLogin;
     @BindView(R.id.btnLogin)
-    Button btnLogin;
-    String Email, Password;
+    MaterialRippleLayout btnLogin;
+    @BindView(R.id.btnSignUp)
+    MaterialRippleLayout btnSignUp;
     @BindView(R.id.progressLogin)
     ProgressBar progressLogin;
 
+    String Email, Password;
     private MainPresenter presenter;
 
 
@@ -44,19 +47,6 @@ public class Login extends AppCompatActivity implements RegistrationMainContract
         presenter = new MainPresenter(this);
     }
 
-    @OnClick(R.id.tvRegister)
-    void openRegister() {
-        Intent intent = new Intent(this, Register.class);
-        startActivity(intent);
-        finish();
-    }
-
-    @OnClick(R.id.ivBackRegister)
-    void back() {
-        Intent intent = new Intent(this, Register.class);
-        startActivity(intent);
-        finish();
-    }
 
     @OnClick(R.id.btnLogin)
     void onLogin() {
@@ -68,6 +58,13 @@ public class Login extends AppCompatActivity implements RegistrationMainContract
         } else {
             Toast.makeText(this, "Incorrect Email or password", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @OnClick(R.id.btnSignUp)
+    void onSignUp(){
+        Intent intent = new Intent(this, Register.class);
+        startActivity(intent);
+        finish();
     }
 
 
